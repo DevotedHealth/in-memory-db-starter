@@ -1,6 +1,6 @@
 # In-Memory Database Starter
 
-This is a minimal project scaffolded for your technical assessment. The details of the assessment can be seen in PROMPT.md.
+This is a minimal project scaffolded for your technical assessment. The details of the assessment can be seen in [PROMPT.md](https://github.com/DevotedHealth/in-memory-db-starter/blob/master/PROMPT.md).
 
 ## Getting Started
 
@@ -15,6 +15,7 @@ This will start the frontend on `http://localhost:5173`.
 
 Below is the structure that we have provided. You're welcome to change anything about this structure if it helps you get to a solution you're proud of!
 
+```
 in-memory-db-starter/
 ├── go-backend/
 │   └── main.go                  # Sample Go server
@@ -35,6 +36,7 @@ in-memory-db-starter/
 ├── README.md                    # Project guide
 ├── tsconfig.json
 └── vite.config.ts
+```
 
 ### Where Should I Put My DB Logic?
 
