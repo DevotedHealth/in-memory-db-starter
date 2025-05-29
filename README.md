@@ -15,7 +15,26 @@ This will start the frontend on `http://localhost:5173`.
 
 Below is the structure that we have provided. You're welcome to change anything about this structure if it helps you get to a solution you're proud of!
 
-CRK TODO
+in-memory-db-starter/
+├── go-backend/
+│   └── main.go                  # Sample Go server
+├── src/
+│   ├── components/
+│   │   ├── CommandInput.tsx     # User input field for commands
+│   │   └── OutputDisplay.tsx    # Shows output or history
+│   ├── db/
+│   │   └── store.ts             # In-memory DB logic (if using TypeScript)
+│   ├── rpc/
+│   │   └── handlers.ts          # UI-to-logic bridge (call store or backend)
+│   ├── App.tsx                  # Main app layout
+│   └── main.tsx                 # React entry point
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── PROMPT.md                    # Assessment instructions for candidates
+├── README.md                    # Project guide
+├── tsconfig.json
+└── vite.config.ts
 
 ### Where Should I Put My DB Logic?
 
@@ -42,7 +61,7 @@ The frontend expects to send:
 
 ```json
 {
-  "command": "SET foo"
+  "command": "SET a foo"
 }
 ```
 
