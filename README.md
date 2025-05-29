@@ -28,7 +28,8 @@ in-memory-db-starter/
 │   ├── rpc/
 │   │   └── handlers.ts          # UI-to-logic bridge (call store or backend)
 │   ├── App.tsx                  # Main app layout
-│   └── main.tsx                 # React entry point
+│   ├── main.tsx                 # React entry point
+│   └── index.css                # Styles
 ├── .gitignore
 ├── package.json
 ├── package-lock.json

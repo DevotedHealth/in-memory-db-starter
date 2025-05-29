@@ -1,5 +1,3 @@
-type Command = 'SET' | 'GET' | 'DELETE' | 'COUNT' | 'BEGIN' | 'ROLLBACK' | 'COMMIT';
-
-export const handleCommand = async (command: Command): Promise<string> => {
+export const handleCommand = async (command: string): Promise<string> => {
     return `Executed: ${command}`;
 };
