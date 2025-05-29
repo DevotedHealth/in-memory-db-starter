@@ -14,7 +14,7 @@ You’ll build a small in-memory database with a user interface to interact with
   - Sets the name in the database to the given value
 
 - `GET [name]`
-  - Prints the value for the given name. If the name is not in the database, prints `NULL`
+  - Prints the value for the given name. If the name is not in the database, prints `NULL` or a meaningful error message
 
 - `DELETE [name]`
   - Deletes the name from the database
@@ -56,6 +56,100 @@ You’ll build a small in-memory database with a user interface to interact with
 - A `README.md` file that includes:
   - How to run your application
   - Which 2 bonus features you implemented
+
+---
+
+## Examples
+
+### Example 1
+```
+>> GET a
+NULL
+>> SET a foo
+>> SET b foo
+>> COUNT foo
+2
+>> COUNT bar
+0
+>> DELETE a
+>> COUNT foo
+1
+>> SET b baz
+>> COUNT foo
+0
+>> GET b
+baz
+>> GET B
+NULL
+>> END
+```
+
+### Example 2
+```
+>> SET a foo
+>> SET a foo
+>> COUNT foo
+1
+>> GET a
+foo
+>> DELETE a
+>> GET a
+NULL
+>> COUNT foo
+0
+>> END
+```
+
+### Example 3
+```
+>> BEGIN 
+>> SET a foo
+>> GET a
+foo
+>> BEGIN 
+>> SET a bar
+>> GET a
+bar
+>> SET a baz
+>> ROLLBACK 
+>> GET a
+foo
+>> ROLLBACK 
+>> GET a
+NULL
+>> END
+```
+
+### Example 4 (Nested Transactions)
+```
+>> SET a foo
+>> SET b baz
+>> BEGIN 
+>> GET a
+foo
+>> SET a bar
+>> COUNT bar
+1
+>> BEGIN 
+>> COUNT bar
+1
+>> DELETE a
+>> GET a
+NULL
+>> COUNT bar
+0
+>> ROLLBACK 
+>> GET a
+bar
+>> COUNT bar
+1
+>> COMMIT 
+>> GET a
+bar
+>> GET b
+baz
+>> END
+```
 
 ---
 
