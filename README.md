@@ -1,6 +1,6 @@
 # In-Memory Database Starter
 
-This is a minimal project scaffolded for your technical assessment.
+This is a minimal project scaffolded for your technical assessment. The details of the assessment can be seen in PROMPT.md.
 
 ## Getting Started
 
@@ -9,41 +9,47 @@ npm install
 npm run dev
 ```
 
+This will start the frontend on `http://localhost:5173`.
+
 ## Project Structure
 
 Below is the structure that we have provided. You're welcome to change anything about this structure if it helps you get to a solution you're proud of!
 
 CRK TODO
 
-### Where Should I Put My Logic?
+### Where Should I Put My DB Logic?
 
-You have two options, depending on your preference:
+You can implement your database logic in one of two ways:
 
-1. Build the logic directly in TypeScript
-You can implement the database logic in src/db/store.ts and wire it directly into the React UI.
+#### Option 1: TypeScript (in-browser)
+Implement your logic directly in `src/db/store.ts` and wire it into the UI using `handleCommand()` (stub is in `src/rpc/handlers.ts`).
 
-2. Use another language
-You’re welcome to build the logic in a separate service in any language (Python, Go, etc.). Just expose an HTTP endpoint like /api/command that accepts a JSON payload:
-```json
-{ "command": "SET foo" }
-```
-and returns a JSON response:
-```json
-{ "output": "OK" }
-```
-The frontend is already configured to proxy `/api` to `localhost:3001`.
+#### Option 2: HTTP Backend (any language)
+Implement your logic in a separate backend (like Go, Python, etc.) that listens on `localhost:3001` and exposes a `POST /command` endpoint. The frontend is already configured to proxy to that port. A sample Go backend is included in `go-sample-backend/main.go`
 
-### Sample Backend in Go
-
-Here's a minimal Go server that handles incoming commands via JSON.
-
-**File: `go-backend/main.go`**
+> Note: This Go backend is just an example. You're welcome to implement your backend logic in any language as long as it listens on `localhost:3001` and responds to `POST /command` with the expected JSON structure.
 
 ```go
-// See go-backend/main.go for full example
+// See go-sample-backend/main.go for full example
 ```
 
 Run with:
 ```bash
-go run go-backend/main.go
+go run go-sample-backend/main.go
+```
+
+The frontend expects to send:
+
+```json
+{
+  "command": "SET foo"
+}
+```
+
+And receive:
+
+```json
+{
+  "output": "OK"
+}
 ```
