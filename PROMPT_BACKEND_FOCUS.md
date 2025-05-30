@@ -123,7 +123,11 @@ NULL
 >> END
 ```
 
-### Example 4 (Nested Transactions - Optional)
+### Example 4 (Nested Transactions)
+> **Note:** The following example includes nested transactions, which go beyond the core requirements.
+> We encourage you to attempt this if time allows, but don’t worry if your implementation doesn’t fully support it.
+> We’ll still move forward with your submission and may chat about your approach during the follow-up conversation.
+
 ```
 >> SET a foo
 >> SET b baz
