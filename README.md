@@ -1,6 +1,9 @@
 # In-Memory Database Starter
 
-This is a minimal project scaffolded for your technical assessment. The details of the assessment can be seen in [PROMPT.md](https://github.com/DevotedHealth/in-memory-db-starter/blob/master/PROMPT.md).
+This is a minimal project scaffolded for your technical assessment. There are two prompts - one with more frontend focus and one with more backend focus. You will be told ahead of time which prompt to follow.
+
+- [Backend-focused prompt](https://github.com/DevotedHealth/in-memory-db-starter/blob/master/PROMPT_BACKEND_FOCUS.md)
+- [Frontend-focused prompt](https://github.com/DevotedHealth/in-memory-db-starter/blob/master/PROMPT_FRONTEND_FOCUS.md)
 
 ## Getting Started
 
