@@ -14,7 +14,7 @@ You’ll build a small in-memory database with a user interface to interact with
   Sets the name in the database to the given value
 
 - `GET [name]`  
-  Displays the value for the given name in the UI. If the name is not in the database, display a meaningful message
+  Displays the value for the given name in the UI. If the name is not in the database, display `NULL` or a meaningful message
 
 - `DELETE [name]`  
   Deletes the name from the database
