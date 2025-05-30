@@ -31,6 +31,7 @@ in-memory-db-starter/
 │   ├── main.tsx                 # React entry point
 │   └── index.css                # Styles
 ├── .gitignore
+├── index.html
 ├── package.json
 ├── package-lock.json
 ├── PROMPT.md                    # Assessment instructions for candidates
