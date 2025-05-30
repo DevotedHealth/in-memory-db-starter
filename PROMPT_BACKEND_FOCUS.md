@@ -58,7 +58,7 @@ Your UI must include:
 ## Deliverables
 
 - Your working code
-- A `README.md` file with instructions for running the frontend and backend (if applicable)
+- A `README.md` file with instructions for running your application
 
 ---
 
