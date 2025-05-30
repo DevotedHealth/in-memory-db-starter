@@ -5,6 +5,7 @@ import (
   "fmt"
   "log"
   "net/http"
+  "strings"
 )
 
 // CommandRequest represents a command sent by the frontend UI.
@@ -30,12 +31,46 @@ func commandHandler(w http.ResponseWriter, r *http.Request) {
 
   fmt.Printf("Received command: %s\n", req.Command)
 
-  // TODO: Parse the command string and update your in-memory state.
-  // This is just a placeholder response:
-  resp := CommandResponse{Output: fmt.Sprintf("Executed: %s", req.Command)}
+  // Basic parsing
+  parts := strings.Fields(req.Command)
+  if len(parts) == 0 {
+    json.NewEncoder(w).Encode(CommandResponse{Output: "ERROR: Empty command"})
+    return
+  }
+
+  op := strings.ToUpper(parts[0])
+  args := parts[1:]
+
+  // Command switch (stubbed)
+  var result string
+  switch op {
+  case "SET":
+    // TODO: implement SET [name] [value]
+    result = "OK"
+  case "GET":
+    // TODO: implement GET [name]
+    result = "NULL"
+  case "DELETE":
+    // TODO: implement DELETE [name]
+    result = "OK"
+  case "COUNT":
+    // TODO: implement COUNT [value]
+    result = "0"
+  case "BEGIN":
+    // TODO: begin transaction
+    result = "OK"
+  case "ROLLBACK":
+    // TODO: roll back most recent transaction
+    result = "TRANSACTION NOT FOUND"
+  case "COMMIT":
+    // TODO: commit all open transactions
+    result = "OK"
+  default:
+    result = "ERROR: Unknown command"
+  }
 
   w.Header().Set("Content-Type", "application/json")
-  json.NewEncoder(w).Encode(resp)
+  json.NewEncoder(w).Encode(CommandResponse{Output: result})
 }
 
 func main() {

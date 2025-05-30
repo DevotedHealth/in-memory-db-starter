@@ -1,11 +1,8 @@
-import { store } from '../db/store'; // If using Option 1 - Frontend logic in TypeScript
-
 /**
- * This function receives a full user-entered command string (for example: "SET a foo")
- * and returns a string result to display in the UI (for example:  "OK", "NULL", or an error message).
+ * This function receives a full user-entered command string (for example: "SET a foo") and returns
+ * a string result to display in the UI (for example:  "OK", "NULL", or an error message).
  *
  * You can implement the command logic in one of two ways:
- *
  * Option 1 — Frontend logic in TypeScript: parse and execute the command directly
  * Option 2 — Backend logic via HTTP: send the command to a server that returns the result
  */
@@ -31,8 +28,10 @@ export const handleCommand = async (command: string): Promise<string> => {
         // TODO: begin transaction
         return 'OK';
       case 'ROLLBACK':
+        // TODO: roll back most recent transaction
         return 'TRANSACTION NOT FOUND';
       case 'COMMIT':
+        // TODO: commit all open transactions
         return 'OK';
       default:
         return 'ERROR: Unknown command';
