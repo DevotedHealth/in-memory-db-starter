@@ -1,6 +1,6 @@
 # Technical Assessment: Frontend-Focused In-Memory Database with UI
 
-This exercise is designed to assess your ability to manage frontend state, handle user input, and build a clear and responsive interface. We’re looking for correctness, clarity, and thoughtful design — both in your code and your UI.
+This exercise is designed to assess your ability to reason about state, handle user input, and build a clean, usable interface. We’re looking for correctness, clarity, and thoughtful design — both in your code and your UI.
 
 You’ll build a small in-memory database with a user interface to interact with it. This project should take no more than 4 hours to complete.
 
