@@ -244,7 +244,7 @@ z = gamma
 ## Follow-Up Conversation Topics
 
 We may ask about:
-- How you might support transactions in the future (see [backend-focused prompt])
+- How you might support transactions in the future (see description in the [backend-focused prompt](https://github.com/DevotedHealth/in-memory-db-starter/blob/master/PROMPT_BACKEND_FOCUS.md#transactions))
 - Approaches to state management
 - Testing strategies across layers
 - How you might enhance usability (for example: syntax highlighting in the input box)
