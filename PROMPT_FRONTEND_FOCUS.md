@@ -241,6 +241,16 @@ z = gamma
 
 ---
 
+## Minimum Requirements
+
+The minimum requirements that a solution must meet in order to be scheduled for a live evaluation of the Tech Assessment are:
+
+- The first three examples from the section above must pass
+- Neither an actual database nor a database library is used
+- The basic commands `GET`, `SET`, `DELETE`, and `COUNT` are implemented per the spec.  They take the correct number of arguments and function properly.
+
+---
+
 ## Follow-Up Conversation Topics
 
 We may ask about:
