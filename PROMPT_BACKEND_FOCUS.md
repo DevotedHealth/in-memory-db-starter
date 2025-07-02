@@ -124,7 +124,7 @@ NULL
 ```
 
 ### Example 4 (Nested Transactions)
-> **Note:** The following example includes nested transactions, which go beyond the core requirements.
+> **Note:** The following example includes committing nested transactions, which go beyond the core requirements.
 > We encourage you to attempt this if time allows, but don’t worry if your implementation doesn’t fully support it.
 > We’ll still move forward with your submission and may chat about your approach during the follow-up conversation.
 
@@ -157,6 +157,16 @@ bar
 baz
 >> END
 ```
+
+---
+
+## Minimum Requirements
+
+The minimum requirements that a solution must meet in order to be scheduled for a live evaluation of the Tech Assessment are:
+
+- The first three examples from the section above must pass
+- Neither an actual database nor a database library is used
+- The basic commands `GET`, `SET`, `DELETE`, and `COUNT` are implemented per the spec.  They take the correct number of arguments and function properly.
 
 ---
 
